@@ -1,0 +1,18 @@
+.carousel-wrapper {
+    width: 100%;
+    padding-top: 5%;
+    display: flex;
+    justify-content: center; /* Horizontally centers children */
+    align-items: center; /* Vertically centers children */
+  }
+  
+  .carousel-img {
+    width: auto;
+    height: 200px;
+    margin: 5% 25%;
+  }
+
+  .carousel-indicators {
+    visibility: hidden;
+  }
+  

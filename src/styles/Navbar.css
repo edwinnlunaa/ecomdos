@@ -1,0 +1,125 @@
+/* Navbar */
+.navbar {
+    background-color: #051923; 
+    padding: 20px 0; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+  }
+  
+  .logo img {
+    height: 7%;
+    width: 7%;
+  }
+  
+  ul li {
+    display: inline-block;
+    text-align: left;
+    min-width: 100px;
+  }
+  
+  .nav-links {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: larger;
+  }
+  
+  .nav-links li {
+    display: inline-block; /* Display nav links horizontally */
+    margin-right: 25px; /* Add spacing between nav links */
+  }
+  
+  .nav-links li:last-child {
+    margin-right: 0; /* Remove margin from last nav link */
+  }
+  
+  .nav-links a {
+    text-decoration: none; /* Remove underline from links */
+    color: #ffffff; 
+    transition: color 0.3s; /* Smooth color transition on hover */
+  }
+  
+  .nav-links a:hover {
+    color: #006494; /* Change color on hover */
+  }
+  
+  .cart-icon img {
+    width: 30px; /* Adjust icon size */
+    height: auto; 
+    margin-left: 45px;
+  }
+  
+
+/* Media Queries */
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+  }
+
+  .logo img {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    font-size: medium;
+  }
+
+  .nav-links li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    text-align: center; /* Center items horizontally */
+  }
+
+  .cart-icon img {
+    width: 25px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    font-size: large;
+  }
+
+  .nav-links li {
+    margin-right: 0;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .cart-icon img {
+    width: 28px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+

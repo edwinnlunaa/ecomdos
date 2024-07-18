@@ -1,0 +1,176 @@
+.contact {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 700px;
+  background-color: #051923;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.contact h1 {
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.contact-form {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+textarea {
+  height: 150px;
+}
+
+::placeholder {
+  color: #888;
+}
+
+#submit-btn {
+  background-color: #006494;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+/* Media Queries */
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  .contact {
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .contact h1 {
+    font-size: 24px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  #submit-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .contact {
+    padding: 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .contact h1 {
+    font-size: 28px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 98%;
+    padding: 9px;
+    font-size: 15px;
+  }
+
+  textarea {
+    height: 120px;
+  }
+
+  #submit-btn {
+    font-size: 15px;
+    padding: 9px 18px;
+  }
+}
+
+/* Laptops */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .contact {
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .contact h1 {
+    font-size: 32px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 96%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  textarea {
+    height: 140px;
+  }
+
+  #submit-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Larger Screens */
+@media (min-width: 1441px) {
+  .contact {
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .contact h1 {
+    font-size: 36px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 95%;
+    padding: 10px;
+    font-size: 17px;
+  }
+
+  textarea {
+    height: 150px;
+  }
+
+  #submit-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
