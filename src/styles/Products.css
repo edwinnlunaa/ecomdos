@@ -1,12 +1,132 @@
-.home-imagepro {
+.product-container {
+    margin-top: 3%; 
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: center;
     text-align: center;
-    margin-top: 0px;
-    overflow: hidden;
+  }
+
+  .filters {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    text-align: center;
   }
   
-  .home-imagepro img {
+  .product {
+    column-gap: 3%;
+    padding: 20px;
+  }
+  
+  .product:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow when hovered */
+  }
+  
+  .product img {
     width: 100%;
-    height: 550px;
-    object-fit: cover;
-    object-position: center -30px;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    padding-top: 8%;
+  }
+  
+  .product h2 {
+    font-size: 30px;
+    margin: 0 0 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 3%;
+    color: black;
+  }
+  
+  .product p {
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .product p:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    padding-top: 5%;
+    font-weight: bold;
+  }
+  
+  .product-container h1 {
+    padding-bottom: 8%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-shadow: 0px 2px 4px rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 70px;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 1200px) {
+    .product-container {
+      grid-gap: 100px;
+    }
+  
+    .product h2 {
+      font-size: 22px;
+    }
+  
+    .product p {
+      font-size: 14px;
+    }
+  
+    .product p:last-child {
+      font-size: 16px;
+    }
+  
+    .product-container h1 {
+      font-size: 35px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-container {
+      grid-gap: 50px;
+    }
+  
+    .product h2 {
+      font-size: 20px;
+    }
+  
+    .product p {
+      font-size: 13px;
+    }
+  
+    .product p:last-child {
+      font-size: 15px;
+    }
+  
+    .product-container h1 {
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-container {
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+    }
+  
+    .product h2 {
+      font-size: 18px;
+    }
+  
+    .product p {
+      font-size: 12px;
+    }
+  
+    .product p:last-child {
+      font-size: 14px;
+    }
+  
+    .product-container h1 {
+      font-size: 25px;
+    }
   }

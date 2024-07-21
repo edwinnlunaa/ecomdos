@@ -2,17 +2,46 @@
     width: 100%;
     padding-top: 5%;
     display: flex;
-    justify-content: center; /* Horizontally centers children */
-    align-items: center; /* Vertically centers children */
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
   }
   
   .carousel-img {
-    width: auto;
-    height: 200px;
-    margin: 5% 25%;
+    width: 100%;
+    height: auto;
+    max-height: 250px; 
+    object-fit: contain;
   }
-
-  .carousel-indicators {
-    visibility: hidden;
+  
+  /* Media queries */
+  @media (max-width: 1200px) { /* Laptops and desktops */
+    .carousel-img {
+      max-height: 220px;
+    }
+  }
+  
+  @media (max-width: 992px) { /* Tablets */
+    .carousel-img {
+      max-height: 200px; 
+    }
+  }
+  
+  @media (max-width: 768px) { /* Landscape tablets and medium screens */
+    .carousel-img {
+      max-height: 180px; 
+    }
+  }
+  
+  @media (max-width: 576px) { /* Phones */
+    .carousel-img {
+      max-height: 160px; 
+    }
+  }
+  
+  @media (max-width: 400px) { /* Small phones */
+    .carousel-img {
+      max-height: 140px; 
+    }
   }
   

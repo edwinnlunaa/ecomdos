@@ -23,6 +23,7 @@
   font-weight: bold;
   font-size: 100px;
   text-transform: uppercase;
+  padding-top: 20%;
 }
 
 .aboutus {
@@ -127,6 +128,7 @@ h2 {
 
   .title h2 {
     font-size: 40px;
+    padding-top: 60%;
   }
 
   .aboutus h1 {

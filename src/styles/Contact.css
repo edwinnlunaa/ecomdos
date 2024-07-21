@@ -10,6 +10,11 @@
   margin-bottom: 50px;
 }
 
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
 .contact h1 {
   color: white;
   padding: 10px;
@@ -112,36 +117,6 @@ textarea {
   #submit-btn {
     font-size: 15px;
     padding: 9px 18px;
-  }
-}
-
-/* Laptops */
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .contact {
-    padding: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-
-  .contact h1 {
-    font-size: 32px;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 96%;
-    padding: 10px;
-    font-size: 16px;
-  }
-
-  textarea {
-    height: 140px;
-  }
-
-  #submit-btn {
-    font-size: 16px;
-    padding: 10px 20px;
   }
 }
 

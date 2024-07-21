@@ -25,11 +25,12 @@
   }
   
   .nav-links {
-    list-style-type: none; /* Remove bullet points */
+    list-style-type: none; 
     margin: 0;
     padding: 0;
     display: flex;
     font-size: larger;
+    justify-content: center;
   }
   
   .nav-links li {
@@ -38,7 +39,7 @@
   }
   
   .nav-links li:last-child {
-    margin-right: 0; /* Remove margin from last nav link */
+    margin-right: 0; 
   }
   
   .nav-links a {
@@ -48,11 +49,11 @@
   }
   
   .nav-links a:hover {
-    color: #006494; /* Change color on hover */
+    color: #006494; 
   }
   
   .cart-icon img {
-    width: 30px; /* Adjust icon size */
+    width: 30px;
     height: auto; 
     margin-left: 45px;
   }
