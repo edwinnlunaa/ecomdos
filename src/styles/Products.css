@@ -55,13 +55,27 @@
   }
   
   .product-container h1 {
-    padding-bottom: 8%;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    text-shadow: 0px 2px 4px rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: 70px;
+    font-size: 50px;
     text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Josefin Sans", sans-serif;
+    background: linear-gradient(to right, #184e77 10%, #52b69a 50%, #d9ed92 60%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 1.5s linear infinite;
+    display: inline-block;
+    padding-bottom: 5%;
+  }
+  
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
   }
 
   @media (max-width: 1200px) {
