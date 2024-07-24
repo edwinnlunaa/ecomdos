@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+GrailKicksCLT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+GrailKicksCLT is a web application dedicated to sneaker and streetwear enthusiasts. The platform offers a curated selection of sneakers and apparel, allowing users to explore, filter, and purchase their favorite items. Built with React for the frontend and Express with a MySQL database for the backend, this application provides a dynamic and responsive shopping experience.
 
-## Available Scripts
+Features
+Home Page: Showcases featured products and offers a brief introduction to GrailKicksCLT.
+Products Page: Displays a list of products with options to filter by price range and product type.
+Contact Page: Provides a contact form for users to get in touch with the team.
+Responsive Design: Optimized for various devices including phones, tablets, and laptops.
+Product Filtering: Allows users to filter products based on price range and type.
 
-In the project directory, you can run:
+Tech Stack
+Frontend:
+React: JavaScript library for building user interfaces.
+React Router: For handling routing and navigation.
+React Bootstrap: For UI components and styling.
 
-### `npm start`
+Backend:
+Express: Web application framework for Node.js.
+MySQL: Relational database management system.
+Node.js: JavaScript runtime environment.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Styling:
+CSS: For styling components and ensuring responsiveness.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+Setup: 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Frontend
 
-### `npm run build`
+Navigate to the Project Directory:
+cd ecomdos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install Dependencies:
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Run the Development Server:
+npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Backend 
 
-### `npm run eject`
+Navigate to the Project Directory:
+cd server.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Run the server:
+node server.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Stopping the app :
+To stop running the server and the react app, you can hit control+c to close each one.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Author : Edwin Luna
