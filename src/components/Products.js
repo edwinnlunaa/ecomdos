@@ -1,59 +1,65 @@
-// Import React, useEffect, useState hooks, and CSS for styling
-import React, { useEffect, useState } from 'react';
-import '../styles/Products.css';
+import React, { useEffect, useState } from 'react'; // Importing necessary hooks from React
+import '../styles/Products.css'; // Importing CSS for styling
 
+// Defining the Products component
 const Products = () => {
-  // State variables
-  const [products, setProducts] = useState([]); // Stores all fetched products
-  const [filteredProducts, setFilteredProducts] = useState([]); // Stores products after filtering
-  const [priceRange, setPriceRange] = useState(''); // Stores selected price range for filtering
-  const [productType, setProductType] = useState(''); // Stores selected product type for filtering
+  // Setting up state variables
+  const [products, setProducts] = useState([]); // To store all products
+  const [filteredProducts, setFilteredProducts] = useState([]); // To store filtered products
+  const [priceRange, setPriceRange] = useState(''); // To store selected price range
+  const [productType, setProductType] = useState(''); // To store selected product type
 
-  // Fetch products when component mounts
+  // useEffect to fetch products when the component mounts
   useEffect(() => {
-    fetchProducts();
+    fetchProducts(); // Fetch products from the API
   }, []);
 
-  // Filter products whenever priceRange, productType, or products change
+  // useEffect to filter products whenever priceRange, productType, or products change
   useEffect(() => {
-    filterProducts();
+    filterProducts(); // Filter the products based on the selected criteria
   }, [priceRange, productType, products]);
 
-  // Function to fetch products from API
+  // Function to fetch products from the API
   const fetchProducts = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/products'); // API endpoint
+      const response = await fetch('http://localhost:5000/api/products'); 
       const data = await response.json();
-      setProducts(data);
-      setFilteredProducts(data); // Initialize filteredProducts with the fetched data
+      if (Array.isArray(data)) { // Check if the fetched data is an array
+        setProducts(data); // Set the products state with fetched data
+        setFilteredProducts(data); // Initialize filteredProducts with the fetched data
+      } else {
+        setProducts([]); // Set products to empty array if fetched data is not an array
+        setFilteredProducts([]); // Set filteredProducts to empty array if fetched data is not an array
+      }
     } catch (error) {
-      console.error('Error fetching products:', error);
+      console.error('Error fetching products:', error); // Log any error
+      setProducts([]); // Set products to empty array in case of error
+      setFilteredProducts([]); // Set filteredProducts to empty array in case of error
     }
   };
 
-  // Function to filter products based on priceRange and productType
+  // Function to filter products based on selected criteria
   const filterProducts = () => {
-    let filtered = products;
+    let filtered = products; // Start with all products
 
-    // Filter by price range
+    // Filter by price range if selected
     if (priceRange) {
-      const [min, max] = priceRange.split('-').map(Number);
-      filtered = filtered.filter(product => product.price >= min && product.price <= max);
+      const [min, max] = priceRange.split('-').map(Number); // Split and convert price range to numbers
+      filtered = filtered.filter(product => product.price >= min && product.price <= max); // Filter products within the price range
     }
 
-    // Filter by product type
+    // Filter by product type if selected
     if (productType) {
-      filtered = filtered.filter(product => product.type === productType);
+      filtered = filtered.filter(product => product.type === productType); // Filter products by type
     }
 
-    setFilteredProducts(filtered); // Update filteredProducts state
+    setFilteredProducts(filtered); // Update the filteredProducts state
   };
 
   return (
     <div className="product-container">
       <h1>Products</h1>
       
-      {/* Filters */}
       <div className="filters">
         <label>
           Price Range:
@@ -78,13 +84,12 @@ const Products = () => {
         </label>
       </div>
 
-      {/* Product list */}
       <ul>
-        {filteredProducts.map(product => (
+        {Array.isArray(filteredProducts) && filteredProducts.map(product => (
           <li key={product.id} className="product">
-            <img src={product.img} alt={product.title} /> 
-            <h2>{product.title}</h2> 
-            <p>{product.description}</p> 
+            <img src={product.img} alt={product.title} />
+            <h2>{product.title}</h2>
+            <p>{product.description}</p>
             <p>Price: ${product.price}</p>
           </li>
         ))}
@@ -93,4 +98,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Products; // Exporting the Products component
