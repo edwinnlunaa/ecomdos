@@ -22,7 +22,7 @@ const Products = () => {
   // Function to fetch products from the API
   const fetchProducts = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/products'); 
+      const response = await fetch('https://ecomdos.onrender.com/api/products'); 
       const data = await response.json();
       if (Array.isArray(data)) { // Check if the fetched data is an array
         setProducts(data); // Set the products state with fetched data
