@@ -5,12 +5,16 @@ require('dotenv').config();
 const express = require('express'); // For creating the server
 const mysql = require('mysql2'); // For connecting to the MySQL database
 const cors = require('cors'); // For handling Cross-Origin Resource Sharing
-const app = express(); // Create an instance of an Express app
-const port = 5000; // Define the port on which the server will run
+
+// Create an instance of an Express app
+const app = express(); 
+
+// Define the port on which the server will run
+const port = process.env.PORT || 5000; 
 
 // CORS middleware setup to allow requests from the specified origin
 app.use(cors({
-  origin: 'http://localhost:3000' 
+  origin: 'https://grailkicksclt.onrender.com' 
 }));
 
 // Database connection setup using credentials from environment variables
